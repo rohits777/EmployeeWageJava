@@ -26,7 +26,8 @@ public class EmployeeWage {
             }
 
             dailywage = WAGEPERHR * empHrs;
-            monthlywage = dailywage * WORKINGDAYS;
+            monthlywage += dailywage;
+            System.out.println("Employee wage:" +dailywage);
         }
 
         System.out.println("Monthly wage of Employee is:" +monthlywage);
