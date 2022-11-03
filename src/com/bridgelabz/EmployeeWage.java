@@ -4,7 +4,7 @@ public class EmployeeWage {
     static final int IS_FULL_TIME = 1, IS_PART_TIME = 2, WAGEPERHR = 20, WORKINGDAYS = 20;
     static final int MAX_HRS_IN_MONTH = 100;
 
-    public static void main(String[] args) {
+    public void computeWage() {
         System.out.println("*** Welcome to Employee wage computation ***");
         //variables
         int monthlywage = 0, totalEmpHrs = 0;
@@ -34,4 +34,12 @@ public class EmployeeWage {
         monthlywage = totalEmpHrs * WAGEPERHR;
         System.out.println("Total employee wage is: " + monthlywage);
     }
-}
+
+    public static void main(String[] args) {
+                EmployeeWage emp = new EmployeeWage();
+                emp.computeWage();
+
+
+        }
+
+    }
