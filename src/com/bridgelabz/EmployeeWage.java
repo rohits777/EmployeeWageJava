@@ -4,8 +4,9 @@ public class EmployeeWage {
     static final int IS_FULL_TIME = 1, IS_PART_TIME = 2, WAGEPERHR = 20, WORKINGDAYS = 20;
     static final int MAX_HRS_IN_MONTH = 100;
 
-    public void computeWage() {
-        System.out.println("*** Welcome to Employee wage computation ***");
+    public void computeWage(String company,int wagePerHr,int maxHrsPerMonth,int workingDays)
+    {
+
         //variables
         int monthlywage = 0, totalEmpHrs = 0;
         int empHrs = 0, totalWorkingDays = 0;
@@ -29,15 +30,19 @@ public class EmployeeWage {
                     empHrs = 0;
             }
             totalEmpHrs += empHrs;
-            System.out.println("Day:" + totalWorkingDays + " Employee Hrs " + empHrs);
+            System.out.println("Day:" + totalWorkingDays + " Employee present Hrs " + empHrs);
         }
         monthlywage = totalEmpHrs * WAGEPERHR;
-        System.out.println("Total employee wage is: " + monthlywage);
+        System.out.println("Total employee wage of: "+company+ "is:" + monthlywage);
     }
 
     public static void main(String[] args) {
+
+        System.out.println("*** Welcome to Employee wage computation ***");
                 EmployeeWage emp = new EmployeeWage();
-                emp.computeWage();
+                emp.computeWage("Delhivery",20, 90,19);
+                emp.computeWage("KingsLanding",20,100, 20 );
+                emp.computeWage("MumbaiIndians", 20,95,17);
 
 
         }
